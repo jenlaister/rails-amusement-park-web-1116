@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Attraction</title>
+  </head>
+  <body>
+    <h1><%= @attraction.name %></h1>
+    <% if current_user.admin %>
+      <%= link_to "Edit Attraction", edit_attraction_path(@attraction) %>
+    <% else %>
+      <%= button_to "Go on this ride", takeride_path %>
+    <% end %>
+  </body>
+</html>

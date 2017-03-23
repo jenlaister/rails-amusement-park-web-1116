@@ -1,0 +1,22 @@
+<%= flash[:notice] %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Name: <%= @user.name %><br>
+    Happiness: <%= @user.happiness %><br>
+    Height: <%= @user.height %><br>
+    Tickets: <%= @user.tickets %><br>
+    Nausea: <%= @user.nausea %><br>
+      <% if @user.admin %>
+        <%= "ADMIN" %>
+      <% else %>
+      <h1> Mood </h1><%= @user.mood %><br>
+    <% end %><br>
+      <%= link_to "Log Out", logout_path %><br>
+      <%= link_to "See attractions", attractions_path %><br>
+  </body>
+</html>

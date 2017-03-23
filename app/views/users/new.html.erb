@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up!</title>
+  </head>
+  <body>
+    <h1>Sign Up!</h1>
+      <%= form_for @user do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name%><br>
+      <%= f.label :height %>
+      <%= f.text_field :height  %><br>
+      <%= f.label :happiness %>
+      <%= f.text_field :happiness  %><br>
+      <%= f.label :nausea %>
+      <%= f.text_field :nausea %><br>
+      <%= f.label :tickets%>
+      <%= f.text_field :tickets %><br>
+      <%= f.label :admin%>
+      <%= f.check_box :admin%><br>
+      <%= f.label :password  %>
+      <%= f.password_field :password %><br>
+      <%= f.label "Confirm Password" %>
+      <%= f.password_field :password_confirmation %><br>
+    <%= f.submit %>
+    <% end %>
+  </body>
+</html>
